@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import AlarmRegister from './AlarmRegsiter';
-import ContextAlarm from './context/contextAlarm';
+import ContextAlarm from './context/ContextAlarm';
 import AlarmList from './AlarmList';
 import AlarmMessage from './AlarmMessage';
 
