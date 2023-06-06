@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import { setAlarm } from '../../../services/slices/alarm';
-import { AlarmContext } from '../context/contextAlarm';
+import { AlarmContext } from '../context/ContextAlarm';
 
 const List = styled.li`
   display: flex;

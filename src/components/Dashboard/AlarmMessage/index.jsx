@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AlarmContext } from '../context/contextAlarm';
+import { AlarmContext } from '../context/ContextAlarm';
 
 const Wrapper = styled.div`
   text-align: start;
