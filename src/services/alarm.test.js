@@ -1,4 +1,4 @@
-import { describe, expect, it, vitest } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import reducer, { setAlarm } from './slices/alarm';
 
 it('should return the initial state', () => {

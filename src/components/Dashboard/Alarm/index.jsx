@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { setAlarm } from '../../../services/slices/alarm';
 import { AlarmContext } from '../context/ContextAlarm';
+import { formatAlarm } from '../../../util';
 
 const List = styled.li`
   display: flex;
@@ -25,7 +26,7 @@ function Alarm({ data, onAlarmClick }) {
   const storageCopy = useSelector(({ alarm }) => JSON.parse(JSON.stringify(alarm.storage)));
   const { message, setMessage } = useContext(AlarmContext);
   const disabled = storageCopy[data.date][data.time].disabled;
-  const formattedDateTime = formatDateString(data.id);
+  const formattedDateTime = formatAlarm(data.id);
 
   function onAlarmClick() {
     setMessage({
@@ -70,17 +71,6 @@ function Alarm({ data, onAlarmClick }) {
       </List>
     </>
   );
-}
-
-function formatDateString(dateString) {
-  const formatted = new Intl.DateTimeFormat('ko', {
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(dateString));
-
-  return formatted;
 }
 
 export default Alarm;
