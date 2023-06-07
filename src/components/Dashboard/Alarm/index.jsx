@@ -30,7 +30,7 @@ function Alarm({ data, onAlarmClick }) {
   function onAlarmClick() {
     setMessage({
       datetime: data.id,
-      description: data.description
+      description: data.description,
     });
   }
 
@@ -77,7 +77,7 @@ function formatDateString(dateString) {
     month: 'long',
     day: 'numeric',
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }).format(new Date(dateString));
 
   return formatted;

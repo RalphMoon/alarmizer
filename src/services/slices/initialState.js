@@ -1,5 +1,5 @@
 const initialState = {
-  storage: {}
+  storage: {},
 };
 
 export default initialState;

@@ -10,7 +10,7 @@ const reducer = {
 const store = configureStore({
   reducer,
   initialState,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;
