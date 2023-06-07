@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-
 import styled from 'styled-components';
+
+import { formatLocalDate, formatCurrent } from '../../util';
 
 const HeaderTitle = styled.div`
   border: 3px solid #fff;
@@ -56,37 +57,8 @@ function Header() {
   }, [currentDateTime]);
 
   return (
-    <HeaderTitle>{ formatDateString(currentDateTime) }</HeaderTitle>
+    <HeaderTitle>{ formatCurrent(currentDateTime) }</HeaderTitle>
   );
-}
-
-function formatLocalDate() {
-  const now = new Date();
-  const pad = function(num) {
-    const norm = Math.abs(Math.floor(num));
-
-    return (norm < 10 ? '0' : '') + norm;
-  };
-
-  return now.getFullYear()
-      + '-' + pad(now.getMonth() + 1)
-      + '-' + pad(now.getDate())
-      + 'T' + pad(now.getHours())
-      + ':' + pad(now.getMinutes())
-      + ':' + pad(now.getSeconds());
-}
-
-function formatDateString(dateString) {
-  const formatted = new Intl.DateTimeFormat('en', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-  }).format(new Date(dateString));
-
-  return formatted;
 }
 
 export default Header;

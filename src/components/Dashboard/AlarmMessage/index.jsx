@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AlarmContext } from '../context/ContextAlarm';
+import { formatMessage } from '../../../util';
 
 const Wrapper = styled.div`
   text-align: start;
@@ -41,7 +42,7 @@ function AlarmMessage() {
             <h2>메시지</h2>
             <Section>
               <Title>
-                { formatDateString(datetime) }
+                { formatMessage(datetime) }
               </Title>
               <Body>{ message.description }</Body>
             </Section>
@@ -49,18 +50,6 @@ function AlarmMessage() {
       }
     </>
   );
-}
-
-function formatDateString(dateString) {
-  const formatted = new Intl.DateTimeFormat('ko', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
-  }).format(new Date(dateString));
-
-  return formatted;
 }
 
 export default AlarmMessage;

@@ -24,7 +24,7 @@ function AlarmList() {
         const time = timeProperty[0];
         const timeInfos = timeProperty[1];
 
-        return { date: date, time: time, ...timeInfos };
+        return { date: date, time: time, ...timeInfos, };
       });
 
       result.push(...dateInfos);
