@@ -1,4 +1,6 @@
-### 현재 시각을 초 단위까지 보여주고 설정한 알람을 alert해주는 Alarmizer입니다 🚨
+현재 시각을 초 단위까지 보여주고 설정한 알람을 alert해주는 Alarmizer입니다 🚨
+
+</br>
 
 ## 목차
   - 서비스 화면
@@ -14,12 +16,19 @@
 
 ## 서비스 화면
 - ### 알람 등록
-![1](https://github.com/RalphMoon/alarmizer/assets/110374331/db5fadc6-c568-42bc-80ac-8c379892e1fc)
-![2](https://github.com/RalphMoon/alarmizer/assets/110374331/54ac5249-34d1-4795-abc1-5112f4d9b457)
+![1](https://github.com/RalphMoon/alarmizer/assets/110374331/833ae9ce-7e42-43bb-b66e-59b0e03f4eb8)
+
+</br>
+
 - ### 알람 끄기
-![3](https://github.com/RalphMoon/alarmizer/assets/110374331/443523d2-d751-431c-bbbe-a22d0a5bf19b)
+![2](https://github.com/RalphMoon/alarmizer/assets/110374331/78084f7c-8a83-4f80-9cdb-3175108e1eb9)
+
+</br>
+
 - ### 메시지창 출력 / 알람 삭제
-![4](https://github.com/RalphMoon/alarmizer/assets/110374331/9ea56079-5b96-4b03-9eac-7339b25164fc)
+![3](https://github.com/RalphMoon/alarmizer/assets/110374331/361b7269-f257-4d69-99a7-c6b6787300e5)
+
+</br>
 
 
 ## 요구사항
