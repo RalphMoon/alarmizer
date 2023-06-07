@@ -23,7 +23,7 @@
 
 </br>
 
-- ### 메시지창 출력 / 알람 삭제
+- ### 메시지 컴포넌트 렌더링 / 알람 삭제
 ![3](https://github.com/RalphMoon/alarmizer/assets/110374331/361b7269-f257-4d69-99a7-c6b6787300e5)
 
 </br>
