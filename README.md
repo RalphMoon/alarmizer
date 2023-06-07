@@ -1,5 +1,6 @@
+# Alarmizer
+
 현재 시각을 초 단위까지 보여주고 설정한 알람을 alert해주는 Alarmizer입니다 🚨
-</br>
 </br>
 ## 목차
   - 서비스 화면
