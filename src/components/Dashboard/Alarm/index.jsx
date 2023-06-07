@@ -42,7 +42,7 @@ function Alarm({ data, onAlarmClick }) {
   }
 
   function onDeleteClick() {
-    if (message.datetime === data.id) {
+    if (message?.datetime === data.id) {
       setMessage(null);
     }
 
