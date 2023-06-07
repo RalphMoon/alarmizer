@@ -1,7 +1,7 @@
 * 작업 결과물의 구조, 실행방법, 기타 참고사항을 정리
 
 # 목차
-  - 실행 방법
+  - 서비스 화면
   - 요구사항
   - 기술 규칙
   - 구조 설명
@@ -15,21 +15,14 @@
         - useContext
   - 보완 사항
 
-# 상태 데이터 구조 / 설계
-# 코드 구현 이유
-  - delete: JSON.parse(JSON.stringify(object))
-  ## 사용 모듈 / API
-  - hooks: useState, useReducer, useCallback, useContext
-  - [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-# 추가 라이브러리
-  - redux-logger
-
-> Create > normalizing state (정규화)
-> 알람 On/Off
-> Delete > JSON.parse(JSON.stringify(object))를 통한 깊은 복사
-
-## 요구사항 외의 구현
-- 동일한 날짜와 동일한 시간에 알람이 이미 있는 경우, alert()로 경고 모달이 뜨게 함.
+## 서비스 화면
+### 알람 등록
+![1](https://github.com/RalphMoon/alarmizer/assets/110374331/db5fadc6-c568-42bc-80ac-8c379892e1fc)
+![2](https://github.com/RalphMoon/alarmizer/assets/110374331/54ac5249-34d1-4795-abc1-5112f4d9b457)
+### 알람 끄기
+![3](https://github.com/RalphMoon/alarmizer/assets/110374331/443523d2-d751-431c-bbbe-a22d0a5bf19b)
+### 메시지창 출력 / 알람 삭제
+![4](https://github.com/RalphMoon/alarmizer/assets/110374331/9ea56079-5b96-4b03-9eac-7339b25164fc)
 
 ## 요구사항
 - [x] 현재 날짜, 요일과 시간이 화면에 표시되어야 하며, 매 초 단위로 현재 시간이 바뀌어야 합니다.
@@ -57,3 +50,22 @@
 - Class, functional, hook 등의 사용에 대한 제약사항은 전혀 없습니다.
 - UI, 디자인 요소는 평가기준과 무관합니다.
 - 반응형에 대한 대응은 중요하지 않습니다.
+
+
+
+
+# 상태 데이터 구조 / 설계
+# 코드 구현 이유
+  - delete: JSON.parse(JSON.stringify(object))
+  ## 사용 모듈 / API
+  - hooks: useState, useReducer, useCallback, useContext
+  - [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+# 추가 라이브러리
+  - redux-logger
+
+> Create > normalizing state (정규화)
+> 알람 On/Off
+> Delete > JSON.parse(JSON.stringify(object))를 통한 깊은 복사
+
+## 요구사항 외의 구현
+- 동일한 날짜와 동일한 시간에 알람이 이미 있는 경우, alert()로 경고 모달이 뜨게 함.
