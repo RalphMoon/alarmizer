@@ -98,7 +98,7 @@
     function AlarmList() {
         return (
             // ...
-            alarms[0] && (
+            {alarms[0] && (
               {alarms.map((alarm) => {
                 return (
                   <Alarm
