@@ -115,44 +115,44 @@
     > AlarmList 컴포넌트는 등록된 알람 수 만큼 Alarm 컴포넌트를 렌더링해주도록 구현하였습니다.
 
 - ### 상태 계층
-    - Redux
-        ```javascript
-        // initialStates.jsx
-        const initialState = {
-          storage: {},
-        };
+- Redux
+  ```javascript
+  // initialStates.jsx
+  const initialState = {
+    storage: {},
+  };
 
-        // alarm.jsx
-        export const alarmSlice = createSlice({
-            // ...
-          reducers: {
-            setAlarm: (state, { payload }) => {
-                // ...
-            }
+  // alarm.jsx
+  export const alarmSlice = createSlice({
+      // ...
+    reducers: {
+      setAlarm: (state, { payload }) => {
+          // ...
+      }
+    }
+  });
+  ```
+  > 전역 상태로 두어야 하는 데이터는 Header, AlarmRegister, AlarmMessage, AlarmList, Alarm 총 5개의 컴포넌트에서 사용되는 "알람에 대한 정보"라고 판단하였습니다. 그래서 이를 여러가지 정보를 저장하기 용이한 객체의 형태로 초기상태를 설정하고 이에 따른 reducer 함수를 구현하였습니다.
+
+- 데이터 정규화
+  ```javascript
+      {
+          "2023-06-07": {
+              "17:31": {
+                  // ...
+              },
+              "17:29": {
+                  // ...
+              }
+          },
+          "2023-05-31": {
+              "17:29": {
+                  // ...
+              }
           }
-        });
-        ```
-        > 전역 상태로 두어야 하는 데이터는 Header, AlarmRegister, AlarmMessage, AlarmList, Alarm 총 5개의 컴포넌트에서 사용되는 "알람에 대한 정보"라고 판단하였습니다. 그래서 이를 여러가지 정보를 저장하기 용이한 객체의 형태로 초기상태를 설정하고 이에 따른 reducer 함수를 구현하였습니다.
-
-    - 데이터 정규화
-        ```javascript
-            {
-                "2023-06-07": {
-                    "17:31": {
-                        // ...
-                    },
-                    "17:29": {
-                        // ...
-                    }
-                },
-                "2023-05-31": {
-                    "17:29": {
-                        // ...
-                    }
-                }
-            }
-        ```
-        > 사용자가 입력한 AlarmRegister 컴포넌트의 시간 설정 form을 건네받으면, 이를 "날짜"와 "시간"으로 정규화하는 로직을 setAlarm 리듀서 함수 내부에 구현하였습니다.
+      }
+  ```
+  > 사용자가 입력한 AlarmRegister 컴포넌트의 시간 설정 form을 건네받으면, 이를 "날짜"와 "시간"으로 정규화하는 로직을 setAlarm 리듀서 함수 내부에 구현하였습니다.
 
 ## 보완할 점
   - reducer와 유틸 함수에 대한 테스트 코드
