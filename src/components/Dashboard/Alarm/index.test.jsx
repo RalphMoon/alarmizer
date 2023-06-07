@@ -1,2 +1,0 @@
-import Alarm from '.';
-
